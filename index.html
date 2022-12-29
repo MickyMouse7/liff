@@ -7,9 +7,21 @@
 </head>
 <body>
   <!-- Import the component -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script 
+    type="module" 
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
 
-<!-- Use it like any other HTML element -->
-<model-viewer src="./images/1600661545662_Darwin.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="./images/1600661545741_Darwin.usdz" xr-environment></model-viewer>
+  <!-- Use it like any other HTML element -->
+  <model-viewer 
+    src="./images/1600661545662_Darwin.glb" 
+    ar 
+    quick-look-browsers="safari chrome"
+    ar-scale="fixed" 
+    camera-controls touch-action="pan-y" 
+    alt="A 3D model of an astronaut" 
+    ios-src="./images/1600661545741_Darwin.usdz" 
+    xr-environment>
+  </model-viewer>
 </body>
 </html>
