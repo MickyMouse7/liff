@@ -72,9 +72,20 @@
     }
 
     async function scanCode() {
-      alert("Scan!!")
-      const result = await liff.scanCode()
-      document.getElementById("scanCode").append(result.value)
+      // if(liff.getOS() === "ios"){
+        window.location = 'https://line.me/R/nv/QRCodeReader'
+
+        const queryString = decodeURIComponent(window.location.search)
+        const params = new URLSearchParams(queryString)
+        if(params.get("param") !== null){
+          document.getElementById("scanCode").append(params.get("param"))
+        }
+
+      // }else{
+      //   //Only android
+      //   const result = await liff.scanCode()
+      //   document.getElementById("scanCode").append(result.value)
+      // }
     }
 
     function openWindow() {
